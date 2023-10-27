@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+#Navbar {
+  background-color: #4a90e2;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+.btn {
+  margin: 5px;
+}
+
+.line-item-container {
+  border-width: 2px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.413);
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.toast {
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px;
+  margin: 10px;
+  text-align: center;
+}
+
+.toast-error {
+  display: block;
+  background-color: #f44336;
+}

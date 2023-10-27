@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import Invoice from "./Pages/Invoice";
+import history from "./Helpers/History";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Navbar from "./Components/Navbar";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import "./App.css";
 
 function App() {
+  // const [authenticated, setAuthenticated] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      {/* <AuthContext.Provider value={{ authenticated, setAuthenticated }}> */}
+      <BrowserRouter history={history}>
+        <Navbar />
+        <div id="App" className="">
+          <Routes>
+            <Route exact path="/" element={<Invoice />}></Route>
+          </Routes>
+        </div>
+      </BrowserRouter>
+      {/* </AuthContext.Provider> */}
     </div>
   );
 }
